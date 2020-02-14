@@ -145,7 +145,8 @@ public:
             default:
                 std::cout << "Undefined error";
         }
-        find_prime::to_N(n);
+        find_prime::
+        to_N(n);
     }
 
     static void greeting() {

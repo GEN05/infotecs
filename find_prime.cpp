@@ -1,4 +1,5 @@
 #include <vector>
+#include <cmath>
 
 #include "write.cpp"
 
@@ -10,18 +11,9 @@ bool is_toN;
 
 class find_prime {
 public:
-    static void fill(std::vector<bool> sieveOfEratosthenes) {
-        std::vector<int> answer;
-        for (int i = 1; i < sieveOfEratosthenes.size(); i++) {
-            if (!sieveOfEratosthenes[i]) {
-                answer.push_back(i);
-            }
-        }
-        write::write_to(answer);
-    }
-
-    static void find_Prime_1_to_n(int n) {
+    static std::vector<int> find_Prime_1_to_n(int n) {
         std::vector<bool> sieveOfEratosthenes;
+        std::vector<int> answer;
         sieveOfEratosthenes.resize(n + 1);
         for (int i = 2; i * i <= n; i++) {
             if (!sieveOfEratosthenes[i]) {
@@ -30,12 +22,19 @@ public:
                 }
             }
         }
-        fill(sieveOfEratosthenes);
+        for (int i = 1; i < sieveOfEratosthenes.size(); i++) {
+            if (!sieveOfEratosthenes[i]) {
+                answer.push_back(i);
+            }
+        }
+        write::write_to(answer);
+        return answer;
     }
 
-    static void find_prime_() {
-        int max = UINT32_MAX / 10;
+    static std::vector<int> find_prime_() {
+        int max = UINT8_MAX;
         std::vector<bool> sieveOfEratosthenes;
+        std::vector<int> answer;
         sieveOfEratosthenes.resize(max);
         for (int i = 2; i * i <= max; i++) {
             if (!sieveOfEratosthenes[i]) {
@@ -44,11 +43,17 @@ public:
                 }
             }
         }
-        fill(sieveOfEratosthenes);
+        for (int i = 1; i < sieveOfEratosthenes.size(); i++) {
+            if (!sieveOfEratosthenes[i]) {
+                answer.push_back(i);
+            }
+        }
+        write::write_to(answer);
+        return answer;
     }
 
-    static void check(bool flag) {
-        is_toN = flag;
+    static void check(bool ch) {
+        is_toN = ch;
     }
 
     static void to_N(int n) {
@@ -57,5 +62,14 @@ public:
         } else {
             find_prime_();
         }
+    }
+
+    static bool isPrime(int n) { // only for test
+        for (int i = 2; i <= sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 };

@@ -11,8 +11,11 @@ public:
 
     void write();
 
-private:
+    static bool isPrime(ui k);
+
     std::vector<int> prime;
+
+private:
     ui Size = 0;
     const ui maximum = INT32_MAX;
 
@@ -27,8 +30,6 @@ private:
     void clear();
 
     void push_back(ui value);
-
-    static bool isPrime(ui k);
 
     void to_console();
 

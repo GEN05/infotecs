@@ -162,10 +162,10 @@ void MyPrime::to_console() {
 }
 
 void MyPrime::to_file() {
-    std::string filename = "out.txt";
+    std::string filename;
     std::cout << "";
     std::cout << "Please input filename with type. Example: out.txt" << std::endl;
-    //std::cin >> filename;
+    std::cin >> filename;
     std::ofstream out;
     if (filename.empty()) {
         out.open("out.txt");

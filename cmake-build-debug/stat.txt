@@ -20,3 +20,14 @@ calculate time: 0
 write time: 6
 total time: 6
 
+Fri Feb 21 11:57:41 2020
+
+is limited: 1
+is console: 1
+is to N: 1
+limit: 99999
+special mode: 1
+calculate time: 12
+write time: 6
+total time: 18
+

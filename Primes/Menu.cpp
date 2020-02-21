@@ -150,7 +150,7 @@ public:
 
     static void greeting() {
         MyPrime Prime;
-        std::cout << "Welcome!" << std::endl << "Please choose what you want:" << std::endl;
+        std::cout << "Please choose what you want:" << std::endl;
         std::ofstream output;
         while (true) {
             menu_Modes();
@@ -162,9 +162,9 @@ public:
             ui semi_time = clock();
             Prime.write();
             ui final_time = clock();
-            std::string filename = "stat.txt";
+            std::string filename;
             std::cout << "Please input filename with type. Example: out.txt" << std::endl;
-            //std::cin >> filename;
+            std::cin >> filename;
             if (filename.empty()) {
                 output.open("stat.txt", std::ios::app | std::ios::ate);
             } else {

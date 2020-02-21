@@ -1,10 +1,8 @@
 #include <gtest/gtest.h>
 
-#include "Primes/Find_prime.cpp"
 #include "Primes/Menu.cpp"
 #include "Primes/Primes.cpp"
 #include "Tests/Test.cpp"
-#include "Primes/Primes.cpp"
 
 /**
   * @author Eugene Gusarov
@@ -12,6 +10,7 @@
   */
 
 int main(int argc, char *argv[]) {
+    std::cout << "Welcome!" << std::endl << "0: run tests" << std::endl << "else: start" << std::endl;
     int choose;
     std::cin >> choose;
     if (choose == 0) {

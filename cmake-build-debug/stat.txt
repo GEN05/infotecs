@@ -1,0 +1,22 @@
+Fri Feb 21 05:40:47 2020
+
+is limited: 1
+is console: 1
+is to N: 1
+limit: 88
+special mode: 4
+calculate time: 0
+write time: 3
+total time: 3
+
+Fri Feb 21 05:41:59 2020
+
+is limited: 1
+is console: 0
+is to N: 1
+limit: 88
+special mode: 4
+calculate time: 0
+write time: 6
+total time: 6
+
